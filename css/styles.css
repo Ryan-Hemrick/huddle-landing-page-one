@@ -44,6 +44,7 @@ body {
   body {
     background-image: url('../images/bg-desktop.svg');
     background-size: cover;
+    padding: 2.25rem 1.75rem 1.75rem 1.75rem;
   }
 }
 
