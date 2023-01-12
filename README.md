@@ -28,7 +28,7 @@ This is a solution to the [Huddle landing page with single introductory section 
 
 
 ### Links
-- Live Site URL: 
+- Live Site URL: https://courageous-boba-ebd10d.netlify.app
 
 
 ## My process

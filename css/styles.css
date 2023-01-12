@@ -33,7 +33,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
 
-  /* Center each of the flex-items on the cross-axis (horizontally). */
+  /* Center each of the flex-items on the cross-axis (horizontally) */
   align-items: center;
 
   /* Setting a minimum amount of space between the flex-items */
