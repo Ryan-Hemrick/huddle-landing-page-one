@@ -213,6 +213,10 @@ footer {
   gap: 0.875rem;
 }
 
+.social-links li {
+  list-style: none;
+}
+
 .social-links a {
   display: inline-block;
   padding: 8px;
