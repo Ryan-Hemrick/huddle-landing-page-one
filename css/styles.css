@@ -1,0 +1,242 @@
+:root {
+  --clr-violet: hsl(257, 40%, 49%);
+  --clr-magenta: hsl(300, 69%, 71%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-open-sans: 'Open Sans', sans-serif;
+  --ff-poppins: 'Poppins', sans-serif;
+}
+
+
+
+/*############################
+General Styles
+##############################*/
+
+body {
+  /* Default font styling */
+  font-family: var(--ff-poppins);
+  font-weight: 400;
+  color: var(--clr-white);
+
+  background-color: var(--clr-violet);
+  background-image: url('../images/bg-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  padding: 1.75rem;
+  min-height: 100vh;
+
+  /* Allow each of the flex-items (header, main, footer) to be spaced out evenly; 
+  header at the top of the page, main in the middle, and footer at the bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* Center each of the flex-items on the cross-axis (horizontally). */
+  align-items: center;
+
+  /* Setting a minimum amount of space between the flex-items */
+  gap: 3rem;
+}
+
+@media (min-width: 769px) {
+  body {
+    background-image: url('../images/bg-desktop.svg');
+    background-size: cover;
+  }
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+
+/*############################
+Font Styles
+##############################*/
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.016rem;
+}
+
+p {
+  font-size: 0.938rem;
+  letter-spacing: 0.016rem;
+  line-height: 1.6;
+}
+
+.hero__info h1 {
+  margin-bottom: 20px;
+}
+.hero__info p {
+  margin-bottom: 25px;
+}
+
+@media (min-width: 769px) {
+  h1 {
+    font-size: 2.375rem;
+    line-height: 1.4;
+  }
+  .hero__info h1 {
+    margin-bottom: 15px;
+  }
+  .hero__info p {
+    margin-bottom: 20px;
+  }
+}
+
+
+
+/*############################
+Button Styles
+##############################*/
+
+button {
+  font-size: 0.875rem;
+  padding: 11px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: 0px 5px 12px -2px rgba(0,0,0,0.5);
+  cursor: pointer;
+  transition-duration: 200ms;
+
+  width: 220px;
+}
+
+button.primary-cta {
+  color: var(--clr-violet)
+}
+button.primary-cta:hover,
+button.primary-cta:focus {
+  background-color: var(--clr-magenta);
+  color: var(--clr-white);
+}
+
+@media (min-width: 769px) {
+  button {
+    width: 190px;
+  }
+}
+
+
+
+/*############################
+Layout (Flexbox) Styles
+##############################*/
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.container {
+  /* Defining a max-width so that the content doesn't stretch too much on small/medium sized devices */
+  max-width: 500px;
+}
+
+.hero__info {
+  text-align: center;
+}
+
+/* Adjust hero layout for larger devices */
+@media (min-width: 769px) {
+  .hero {
+    /* have flex-items sit side-by-side */
+    flex-direction: row;
+    gap: 2.75rem;
+  }
+  .container {
+    /* max-width to match design spec for larger devices */
+    max-width: 1280px;
+  }
+  .hero__info {
+    text-align: left;
+    /* Using flex-basis to get the flex-item sizing to match the design spec */
+    flex-basis: 500px;
+    padding-bottom: 10%;
+  }
+}
+
+
+
+/*############################
+Header Styles
+##############################*/
+
+/* Flexbox only used for horizontal alignment */
+header {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.brand-logo {
+  width: 140px;
+}
+
+@media (min-width: 769px) {
+  .brand-logo {
+    width: 190px;
+  }
+}
+
+
+
+/*############################
+Footer Styles
+##############################*/
+
+/* Flexbox only used for horizontal alignment */
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+@media (min-width: 769px) {
+  footer {
+    justify-content: flex-end;
+  }
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 0.875rem;
+}
+
+.social-links a {
+  display: inline-block;
+  padding: 8px;
+  border: 1px solid var(--clr-white);
+  border-radius: 50%;
+  transition-duration: 200ms;
+}
+
+/* IcoMoon CSS */
+.icon {
+  display: block;
+  width: 1.125em;
+  height: 1.125em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: var(--clr-white);
+  transition-duration: 200ms;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+  border: 1px solid var(--clr-magenta);
+}
+.social-links a:hover .icon,
+.social-links a:focus .icon {
+  fill: var(--clr-magenta);
+}
